@@ -17,7 +17,7 @@ declare module 'mockjs';
 declare module '@antv/data-set';
 
 declare module 'react-fittext';
-
+// test
 // google analytics interface
 interface GAFieldsObject {
   eventCategory: string;
