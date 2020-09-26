@@ -106,7 +106,7 @@ export default {
           path: '/',
           name: 'welcome',
           icon: 'smile',
-          component: './Welcome',
+          component: './Index',
         },
         {
           path: '/compress',
