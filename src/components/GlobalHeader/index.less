@@ -2,6 +2,20 @@
 
 @pro-header-hover-bg: rgba(0, 0, 0, 0.025);
 
+.logo {
+  display: inline-block;
+  height: @layout-header-height;
+  padding: 0 0 0 24px;
+  font-size: 20px;
+  line-height: @layout-header-height;
+  vertical-align: top;
+  cursor: pointer;
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
 .menu {
   :global(.anticon) {
     margin-right: 8px;
@@ -11,20 +25,29 @@
   }
 }
 
+.trigger {
+  height: @layout-header-height;
+  padding: ~'calc((@{layout-header-height} - 20px) / 2)' 24px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s, padding 0s;
+  &:hover {
+    background: @pro-header-hover-bg;
+  }
+}
+
 .right {
-  display: flex;
   float: right;
-  height: 48px;
-  margin-left: auto;
+  height: 100%;
   overflow: hidden;
   .action {
-    display: flex;
-    align-items: center;
+    display: inline-block;
     height: 100%;
     padding: 0 12px;
     cursor: pointer;
     transition: all 0.3s;
-    > span {
+    > i {
+      color: @text-color;
       vertical-align: middle;
     }
     &:hover {
@@ -52,31 +75,18 @@
 }
 
 .dark {
+  height: @layout-header-height;
   .action {
     color: rgba(255, 255, 255, 0.85);
-    > span {
+    > i {
       color: rgba(255, 255, 255, 0.85);
     }
     &:hover,
     &:global(.opened) {
       background: @primary-color;
     }
-  }
-}
-
-:global(.ant-pro-global-header) {
-  .dark {
-    .action {
-      color: @text-color;
-      > span {
-        color: @text-color;
-      }
-      &:hover {
-        color: rgba(255, 255, 255, 0.85);
-        > span {
-          color: rgba(255, 255, 255, 0.85);
-        }
-      }
+    :global(.ant-badge) {
+      color: rgba(255, 255, 255, 0.85);
     }
   }
 }
@@ -88,17 +98,23 @@
   .name {
     display: none;
   }
+  i.trigger {
+    padding: 22px 12px;
+  }
+  .logo {
+    position: relative;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
   .right {
     position: absolute;
     top: 0;
     right: 12px;
+    background: #fff;
     .account {
       .avatar {
         margin-right: 0;
       }
-    }
-    .search {
-      display: none;
     }
   }
 }

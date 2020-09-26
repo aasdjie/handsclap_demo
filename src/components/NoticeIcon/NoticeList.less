@@ -19,7 +19,7 @@
 
     .avatar {
       margin-top: 4px;
-      background: @component-background;
+      background: #fff;
     }
     .iconElement {
       font-size: 32px;
@@ -92,7 +92,9 @@
     cursor: pointer;
     transition: all 0.3s;
     user-select: none;
-
+    &:hover {
+      color: @heading-color;
+    }
     &:only-child {
       width: 100%;
     }
