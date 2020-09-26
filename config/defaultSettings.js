@@ -8,9 +8,9 @@ export default {
   fixSiderbar: false,
   colorWeak: false,
   menu: {
-    locale: true
+    locale: true,
   },
-  title: 'Ant Design Pro',
+  title: 'HANDSCLAP',
   pwa: true,
-  iconfontUrl: ''
+  iconfontUrl: '',
 }
